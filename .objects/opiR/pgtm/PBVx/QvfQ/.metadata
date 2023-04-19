@@ -1,0 +1,14 @@
+﻿{
+  "Id": "QvfQeV0f1kyW1iaX5q-yEQ",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/QvfQeV0f1kyW1iaX5q-yEQ",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/PBVxcC6zEEOgvczItWRVtQ",
+  "Name": "Click 'Search Button'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2023-03-23T08:40:03.0378782Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-03-23T08:40:03.0378782Z"
+}

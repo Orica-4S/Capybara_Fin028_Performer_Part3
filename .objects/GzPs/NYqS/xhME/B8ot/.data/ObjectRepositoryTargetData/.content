@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="yVPYW94Eo0m4g8Iz2S1Elg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad.orica.net/fiori#ManageConsolBilling-display" DesignTimeRectangle="8, 123, 1319, 613" DesignTimeScaleFactor="1" FriendlyName="'Consolidation KeyContra…'" FullSelectorArgument="&lt;webctrl id='application-ManageConsolBilling-display-component---main--mainPage-page' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ManageConsolBilling-display-component---main--mainPage-page' tag='DIV' type='' class='sapMPage sapMPageBgStandard sapMPageWithFooter sapMPageBusyCoversAll' aaname='' check:innerText='Consolidation Key&amp;#xD;&amp;#xA;Contract&amp;#xD;&amp;#xA;Contract&amp;#xD;&amp;#xA;Proforma Billing&amp;#xD;&amp;#xA;Standard*&amp;#xD;&amp;#xA;Contract No&amp;#xD;&amp;#xA;Sales Document&amp;#xD;&amp;#xA; &amp;#xD;&amp;#xA;5520284' /&gt;" Guid="7a734b06-0b5a-47d5-a7fe-eef6648f6a1d" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6103370c1fdc9556f6fe94507bec4ad1.png" xmlns="">0f0rHWogRjEeSDUAgboQi6A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">MouseScrollSearchedElement</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

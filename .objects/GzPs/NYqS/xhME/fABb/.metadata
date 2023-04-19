@@ -1,0 +1,14 @@
+﻿{
+  "Id": "fABbBe4OvEOtAnFnfa0QoQ",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/fABbBe4OvEOtAnFnfa0QoQ",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/xhMEZA4zEkeCLh76SZRUog",
+  "Name": "Type into  Distribution Channel",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-02-19T16:14:58.0363276Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-02-19T16:14:58.0363276Z"
+}

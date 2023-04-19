@@ -1,0 +1,14 @@
+﻿{
+  "Id": "3pvHj-OZqUGSxNQ3fmw0Qw",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/3pvHj-OZqUGSxNQ3fmw0Qw",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/xhMEZA4zEkeCLh76SZRUog",
+  "Name": "Check App State 'Manage Consolidated'",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2023-02-19T15:58:27.2679012Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-02-19T15:58:27.2679012Z"
+}

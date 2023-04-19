@@ -1,0 +1,14 @@
+﻿{
+  "Id": "GDHUvCFoDkWwRdlAR7Y3Yg",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/GDHUvCFoDkWwRdlAR7Y3Yg",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/NYqSJ80FvE-vw46rB4bqYg",
+  "Name": "Consolidated Billing Results Screen",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2023-02-19T19:43:58.7486787Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-02-19T19:43:58.7486787Z"
+}

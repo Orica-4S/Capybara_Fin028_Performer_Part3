@@ -1,0 +1,14 @@
+﻿{
+  "Id": "B8_Os7OXXUSVezrbaLhDQw",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/B8_Os7OXXUSVezrbaLhDQw",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/xhMEZA4zEkeCLh76SZRUog",
+  "Name": "Type Into 'Division Box'",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-02-19T16:15:15.9109305Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-02-19T16:15:15.9109305Z"
+}

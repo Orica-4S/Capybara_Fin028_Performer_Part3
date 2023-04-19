@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="nf9NuQxy_k-6Vu_n4fjpiQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad-qa.orica.net/fiori#ManageConsolBilling-display" DesignTimeRectangle="249, 298, 193, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'May contain tokens'" FullSelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-SalesOrder' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-SalesOrder' tag='DIV' type='' class='sapMInputBase sapMInputBaseHeightMargin sapMInput sapMMultiInput sapMInputBaseHasEndIcons' aaname='' /&gt;" Guid="3ad4c3d7-21b4-4ca2-927f-c0a79390b914" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9a71a39ff7c1a4499c0ab668741ecdd2.png" xmlns="">0kcM_XX_6u0KVv83QRsoJqA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

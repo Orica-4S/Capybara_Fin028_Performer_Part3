@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="LATgFGrp8EKqnYZfHVDW1w" Reference="Ri9KTxqDCECu76kbixR3Rw/tZ9fqPI1TkOwt7-e7yHWdg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad.orica.net/fiori#Shell-home" DesignTimeRectangle="1031, 131, 666, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'Search Box'" FullSelectorArgument="&lt;webctrl id='searchFieldInShell-input' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchFieldInShell-input' tag='DIV' type='' class='sapMInputBase sapMInputBaseHeightMargin sapMInput searchInput' aaname='' /&gt;" Guid="ad8760c2-7636-4278-b163-86de77495412" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Home*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3df23837743954daeafde1ded28e1d07.png" xmlns="">3df23837743954daeafde1ded28e1d07.png</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

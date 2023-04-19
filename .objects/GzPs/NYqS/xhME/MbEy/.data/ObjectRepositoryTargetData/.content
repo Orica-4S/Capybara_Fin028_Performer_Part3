@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="tdNPfLkW0UmcVScBYK1xsw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad.orica.net/fiori#ManageConsolBilling-display&amp;/Messages" DesignTimeRectangle="9, 245, 1305, 33" DesignTimeScaleFactor="1" ElementType="TableRow" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl id='application-ManageConsolBilling-display-component---messages--idOutputTable' /&gt;&lt;webctrl ui5-type='Group Header Row' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ManageConsolBilling-display-component---messages--idOutputTable' /&gt;&lt;webctrl ui5-type='Group Header Row' tag='TR' type='' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeInactive sapMLIBFocusable sapMGHLI' aaname='' check:innerText='Billing Document: 90619269' /&gt;" Guid="f3b764fc-fc4c-4ab3-9e71-c495a08de6ce" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1897a97c79da1ab885e33fdba0150257.png" xmlns="">0IKwWzRhUXU2Puys8tZK5FA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetAttribute</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

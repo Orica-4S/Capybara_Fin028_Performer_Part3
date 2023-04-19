@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="n4Xaz6zSEUiyUbDEtIS9Yw" Reference="Ri9KTxqDCECu76kbixR3Rw/UV2tSVD6ikKfH_UX14eddw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad.orica.net/fiori#BillingDocument-manage&amp;/object/display/90619188" DesignTimeRectangle="1267, 978, 96, 48" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Preview Button'" FullSelectorArgument="&lt;webctrl aaname='Preview' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Preview' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBarChild' check:text='Preview' /&gt;" Guid="e04341a9-c3f9-49aa-b802-0909b3de03d9" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Billing Document' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="01159ac8aaf9065b2aa688adf62e2410.png" xmlns="">01159ac8aaf9065b2aa688adf62e2410.png</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

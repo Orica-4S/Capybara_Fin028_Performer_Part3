@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="BhIfzxhd10yrWwylqXTxgg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad-qa.orica.net/fiori#ManageConsolBilling-display" DesignTimeRectangle="24, 452, 260, 21" DesignTimeScaleFactor="1" FriendlyName="'Grouping by'" FullSelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl id='searchReqSmartTableContract-header' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl id='searchReqSmartTableContract-header' tag='DIV' type='' class='sapMTitle sapMTitleStyleAuto sapMTitleNoWrap sapUiSelectable sapMTitleMaxWidth sapMTitleTB sapMH4Style sapUiCompSmartTableHeader sapMBarChild' aaname='' check:innerText='Grouping by Contract: Items (55)' /&gt;" Guid="4185b147-31a9-4c36-b41f-d1f4f7680f18" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="056de530460731c9b6c2222cabc944b1.png" xmlns="">0Vdg_SS3NPkKrPDQXuSjSjQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetAttribute</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "WZ86MDU8n0W-YdOEwZY2zg",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/WZ86MDU8n0W-YdOEwZY2zg",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/z8B8yxhLN06krz0LIgaFtw",
+  "Name": "Click 'Home Button'",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2023-03-23T08:45:01.5555876Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-03-23T08:45:01.5555876Z"
+}

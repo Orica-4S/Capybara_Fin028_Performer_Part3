@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="yGt0be6EMkmoz1lZhCLgzw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" DesignTimeRectangle="534, 83, 267, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Manage Consolidated'" FullSelectorArgument="&lt;webctrl id='shellAppTitle' /&gt;" FuzzySelectorArgument="&lt;webctrl id='shellAppTitle' tag='DIV' type='' class='sapUshellAppTitleClickable sapUshellShellAppTitleContainer sapUshellAppTitle' aaname='' check:innerText='Manage Consolidated Billing' /&gt;" Guid="60d589f0-a8ea-4c69-b993-cb8f78d16f43" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="07e27ac072ba4128e5c58de407e3b828.png" xmlns="">0n5e8gca6FEGWCIPJceuJWQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

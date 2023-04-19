@@ -1,0 +1,15 @@
+﻿{
+  "Id": "GzPsKC8GZkG9EjGLBCjKbg",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/GzPsKC8GZkG9EjGLBCjKbg",
+  "Name": "Manage Consolidated Billing",
+  "Description": "Manage Consolidated Billing Screen",
+  "Type": "App",
+  "Created": "2023-02-19T15:57:58.1720216Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-02-19T15:58:00.0743109Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

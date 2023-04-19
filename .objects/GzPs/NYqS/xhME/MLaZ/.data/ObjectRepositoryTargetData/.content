@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="a7qou4uHSUu_HkherKSMRA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad.orica.net/fiori#ManageConsolBilling-display" DesignTimeRectangle="760, 484, 59, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;webctrl id='dialogButtonCancel' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dialogButtonCancel' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBarChild' aaname='Cancel' check:innerText='Cancel' /&gt;" Guid="0b983926-afac-4bed-86f1-db6c6b7b0516" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2dd7e018e500c71ed6ae8a925f034521.png" xmlns="">0niwMnn01pUG4ir1HSjSFyw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

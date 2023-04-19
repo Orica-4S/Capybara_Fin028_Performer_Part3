@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="eSoSlh_6DUKWJ58OdQu8QQ" Reference="IuIVQQ0be0adgHtC-zg-VA/4cQyL9I8PkGioQQ9k9CGtg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" DesignTimeRectangle="1806, 978, 119, 48" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Create Button'" FullSelectorArgument="&lt;webctrl id='application-ManageConsolBilling-display-component---main--createButton' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ManageConsolBilling-display-component---main--createButton' tag='BUTTON' type='' class='sapMBarChild sapMBtn sapMBtnBase sapMBtnDisabled' aaname='Create Billing Documents' check:text='Create' /&gt;" Guid="16ab3cfc-d71b-499e-9c93-60b575ad20ea" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Manage Consolidated Billing*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="c2a3ba04c97fd05ef1ce4f9e17014c77.png" xmlns="">c2a3ba04c97fd05ef1ce4f9e17014c77.png</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

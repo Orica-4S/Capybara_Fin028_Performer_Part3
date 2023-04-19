@@ -1,0 +1,14 @@
+﻿{
+  "Id": "mPAdRqoDL062ZLBLh3PaOQ",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/mPAdRqoDL062ZLBLh3PaOQ",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/vgEAXO6tGEqCFYJ06d-1zQ",
+  "Name": "Get Attribute for Total Contract Number",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-03-03T06:40:12.562646Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-03-03T06:40:12.562646Z"
+}

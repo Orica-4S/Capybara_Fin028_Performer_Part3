@@ -1,0 +1,14 @@
+﻿{
+  "Id": "GQe2-4o4IE6UlXj8Qi48eg",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/GQe2-4o4IE6UlXj8Qi48eg",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/vYKJhZm64EmN_ifBiamKGw",
+  "Name": "Click 'Checkbox'",
+  "Type": "Element",
+  "TaxonomyType": "Checkbox",
+  "Created": "2023-03-23T08:42:56.0042299Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-03-23T08:42:56.0042299Z"
+}

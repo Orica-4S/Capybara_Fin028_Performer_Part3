@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="fJZWioUSokOQE_Ib5Ad7qw" Reference="Ri9KTxqDCECu76kbixR3Rw/sDk1Dizq9UyynQOb0LR0GA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad.orica.net/fiori#BillingDocument-manage" DesignTimeRectangle="1367, 978, 91, 48" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Display Button'" FullSelectorArgument="&lt;webctrl aaname='Display' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Display' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnDisabled sapMBarChild' check:text='Display' /&gt;" Guid="30db6bcb-5690-4118-82b4-4adbf8a83a83" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Billing Documents' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ff8c16167391448150b9a5c03c88c4f4.png" xmlns="">ff8c16167391448150b9a5c03c88c4f4.png</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

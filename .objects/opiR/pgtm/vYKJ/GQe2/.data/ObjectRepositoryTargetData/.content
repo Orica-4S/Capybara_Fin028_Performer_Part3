@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="BVJMCvZKKUqtBVV2OJlTkA" Reference="Ri9KTxqDCECu76kbixR3Rw/Qsdrg379Rkqp5pJSza_YAg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad.orica.net/fiori#BillingDocument-manage" DesignTimeRectangle="61, 607, 48, 48" DesignTimeScaleFactor="1.5" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl aria-label='Select all rows' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Select all rows' tag='DIV' type='' class='sapMCb sapMLIBSelectM' aaname='' /&gt;" Guid="7b41d674-af59-4c95-9984-12c98e5687f9" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Billing Documents' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b12cee798f7418269f73e6bfc4b9fffd.png" xmlns="">b12cee798f7418269f73e6bfc4b9fffd.png</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

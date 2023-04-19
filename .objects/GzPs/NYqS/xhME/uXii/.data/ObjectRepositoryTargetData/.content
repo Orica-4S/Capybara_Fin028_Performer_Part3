@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NdtqVNRiI0mePVlyIEKUvg" Reference="IuIVQQ0be0adgHtC-zg-VA/RhuBYizDDEqTTBc9ofbMbw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" DesignTimeRectangle="13, 862, 48, 48" DesignTimeScaleFactor="1.5" ElementType="CheckBox" FriendlyName="'ContractNo. CheckBox'" FullSelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl ui5-role='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl ui5-role='checkbox' tag='DIV' type='' class='sapMCb sapMLIBSelectM' aaname='' /&gt;" Guid="1a8611b1-2cea-4f02-9786-2737fc77912a" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6305bcf53d54b48a50f9c886e82ac4b2.png" xmlns="">6305bcf53d54b48a50f9c886e82ac4b2.png</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

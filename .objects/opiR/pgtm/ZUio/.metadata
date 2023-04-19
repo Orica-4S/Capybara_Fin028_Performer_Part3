@@ -1,0 +1,14 @@
+﻿{
+  "Id": "ZUioIWMeVk2ra9MiF1EUUw",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/ZUioIWMeVk2ra9MiF1EUUw",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/pgtmMh9xWkmnNLDK07KYXg",
+  "Name": "PDF Screen",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2023-03-23T08:47:18.2859068Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-03-23T08:47:18.2859068Z"
+}

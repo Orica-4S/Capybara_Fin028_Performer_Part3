@@ -1,0 +1,15 @@
+﻿{
+  "Id": "xhMEZA4zEkeCLh76SZRUog",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/xhMEZA4zEkeCLh76SZRUog",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/NYqSJ80FvE-vw46rB4bqYg",
+  "Name": "Manage Consolidated Billing Screen",
+  "Type": "Screen",
+  "Created": "2023-02-19T15:57:59.5611804Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-02-19T15:58:01.0815565Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

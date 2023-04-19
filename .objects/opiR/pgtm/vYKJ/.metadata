@@ -1,0 +1,14 @@
+﻿{
+  "Id": "vYKJhZm64EmN_ifBiamKGw",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/vYKJhZm64EmN_ifBiamKGw",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/pgtmMh9xWkmnNLDK07KYXg",
+  "Name": "Manage Billing Documents- Home Screen",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2023-03-23T08:41:13.7049232Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-03-23T08:41:13.7049232Z"
+}

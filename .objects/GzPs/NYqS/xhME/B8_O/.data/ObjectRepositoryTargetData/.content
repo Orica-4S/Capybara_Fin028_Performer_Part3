@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SGMLLW3_akqX5UaE0nFAug" Reference="IuIVQQ0be0adgHtC-zg-VA/sK4vwz1jXk22vB7Y9MGmiw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" DesignTimeRectangle="789, 539, 341, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'Division Box'" FullSelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-OrganizationDivision' ui5-label='Division' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-OrganizationDivision' ui5-label='Division' tag='DIV' type='' class='sapMInput sapMInputBase sapMInputBaseHasEndIcons sapMInputBaseHeightMargin sapMMultiInput' aaname='' /&gt;" Guid="7d278ea9-296a-4453-b298-555edc394693" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Manage Consolidated Billing*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cb2da9366463d2a743b75662424572f7.png" xmlns="">cb2da9366463d2a743b75662424572f7.png</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

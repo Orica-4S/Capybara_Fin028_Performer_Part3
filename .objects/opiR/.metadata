@@ -1,0 +1,11 @@
+﻿{
+  "Id": "opiR9C-mU0SDrWTHOp_y0w",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/opiR9C-mU0SDrWTHOp_y0w",
+  "Name": "SAP Home Screen",
+  "Type": "App",
+  "Created": "2023-02-19T16:03:47.1633094Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-02-19T16:03:47.1633094Z"
+}

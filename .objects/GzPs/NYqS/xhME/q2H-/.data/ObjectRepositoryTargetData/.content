@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Hz7UYQkDQ06xpcNEJJ5oFg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" DesignTimeRectangle="524, 434, 160, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'16.03.2023Date'" FullSelectorArgument="&lt;webctrl id='InvoiceDatePicker' /&gt;" FuzzySelectorArgument="&lt;webctrl id='InvoiceDatePicker' tag='DIV' type='' class='sapMInputBase sapMInputBaseHeightMargin sapMInputBaseHasEndIcons' aaname='' /&gt;" Guid="d248e52f-20d0-49c9-8f3c-a4ff52d2bb60" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="10e472655d34408837b6141f64ce9078.png" xmlns="">0Dfe2ujLDeEqnoxVxSZRwfA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

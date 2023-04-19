@@ -1,0 +1,14 @@
+﻿{
+  "Id": "GQXPbRQ70ECwzNnFkp4NcA",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/GQXPbRQ70ECwzNnFkp4NcA",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/xhMEZA4zEkeCLh76SZRUog",
+  "Name": "Type Into 'Sales Documents'",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-03-02T06:45:09.0333323Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-03-02T06:45:09.0333323Z"
+}

@@ -1,0 +1,946 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="InputDetails_ManageConsolidatedBillings" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_SalesDocNumbers" Type="InArgument(x:String)" />
+    <x:Property Name="in_SalesOrganization" Type="InArgument(x:String)" />
+    <x:Property Name="in_DistributionChannel" Type="InArgument(x:String)" />
+    <x:Property Name="in_Division" Type="InArgument(x:String)" />
+    <x:Property Name="out_ContcatNumbers" Type="OutArgument(x:String)" />
+    <x:Property Name="in_BillingDate" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1002,4142</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>InputDetails_ManageConsolidatedBillings_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="36">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="100">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="[Workflow Name]:-&#xA;InputDetails_ManageConsolidatedBillings&#xA;&#xA;[Description]:-&#xA;This workflow will enter The Input Details for Manage Consolidated Billing Screen and Create Billing Report.&#xA;Enitre workflow is enclosed in try catch, in case of exceptions, a appropriate message will be logged and error will be rethrown to the calling workflow.&#xA;&#xA;[Input]:-&#xA;@in_Config:- Dictionary&lt;string,object&gt; containing configurable key value pairs for variables to be used.&#xA;@in_SalesDocNumbers:-  String containing Sales document numbers.&#xA;&#xA;[IOutput]:-&#xA;@Out_ContcatNumbers:- String containing Contcat numbers count.&#xA;&#xA;[Remarks]:- &#xA;In case of any errors the workflow will capture the error,log custom message  and rethrow the error." DisplayName="InputDetails_ManageConsolidatedBillings" sap:VirtualizedContainerService.HintSize="1012,4077" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_SalesDocNumber" />
+      <Variable x:TypeArguments="s:String[]" Name="arrSalesDocNumbers" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="950,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Input Details for Manage Consolidated Billings&quot;]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="950,25" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,171" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:BuildDataTable DataTable="[dt_SalesDocNumber]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="338,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;SalesDocNumber&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;SalesDocNumber&gt;307931&lt;/SalesDocNumber&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;SalesDocNumber&gt;442217&lt;/SalesDocNumber&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <Assign DisplayName="Assign arrSalesDocNumbers" sap:VirtualizedContainerService.HintSize="950,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[arrSalesDocNumbers]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[in_SalesDocNumbers.Split("[k(enter)]")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Manage Consolidated Billing Screen(1)" sap:VirtualizedContainerService.HintSize="950,3284" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8bd455bc-c333-40c2-ba92-e523520419b0" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="916,3067" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="ContractNumberExists" />
+              <Variable x:TypeArguments="x:String" Name="TotalContractNo" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Type Into 'Sales Documents''" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,25" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://launchpad-qa.orica.net/fiori#ManageConsolBilling-display" ContentHash="nf9NuQxy_k-6Vu_n4fjpiQ" DesignTimeRectangle="249, 298, 193, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Type Into 'Sales Documents''" FullSelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-SalesOrder' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-SalesOrder' tag='DIV' type='' class='sapMInputBase sapMInputBaseHeightMargin sapMInput sapMMultiInput sapMInputBaseHasEndIcons' aaname='' /&gt;" Guid="3ad4c3d7-21b4-4ca2-927f-c0a79390b914" InformativeScreenshot="9a71a39ff7c1a4499c0ab668741ecdd2.png" Reference="_STlSmqvnk2nWpXaiClazw/GQXPbRQ70ECwzNnFkp4NcA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="854,25" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arrSalesDocNumbers]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540,852" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[String.IsNullOrEmpty(currentItem) =False]" sap:VirtualizedContainerService.HintSize="478,737" sap2010:WorkflowViewState.IdRef="If_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,461" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Sales Order: &quot;+currentItem.ToString]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="[Convert.ToDouble(in_Config(&quot;Low&quot;).ToString)]" DelayBetweenKeys="1" DisplayName="Type Into 'Type Into 'Sales Documents''" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,218" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Text="[currentItem.ToString.Trim + &quot;[k(enter)]&quot;]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://launchpad-qa.orica.net/fiori#ManageConsolBilling-display" ContentHash="nf9NuQxy_k-6Vu_n4fjpiQ" DesignTimeRectangle="249, 298, 193, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Type Into 'Sales Documents''" FullSelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-SalesOrder' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-SalesOrder' tag='DIV' type='' class='sapMInputBase sapMInputBaseHeightMargin sapMInput sapMMultiInput sapMInputBaseHasEndIcons' aaname='' /&gt;" Guid="3ad4c3d7-21b4-4ca2-927f-c0a79390b914" InformativeScreenshot="9a71a39ff7c1a4499c0ab668741ecdd2.png" Reference="_STlSmqvnk2nWpXaiClazw/GQXPbRQ70ECwzNnFkp4NcA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                        </Sequence>
+                      </If.Then>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="1" DisplayName="Type Into 'Type Into 'SalesOrganization Box''" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,25" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Text="[In_SalesOrganization]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" ContentHash="25z0mmyUMkScePqmq9eA7w" DesignTimeRectangle="59, 539, 341, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'Type Into 'SalesOrganization Box''" FullSelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-SalesOrganization' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-label='Sales Organization' tag='DIV' type='' class='sapMInput sapMInputBase sapMInputBaseHasEndIcons sapMInputBaseHeightMargin sapMFocus sapMInputFocused' aaname='' /&gt;" Guid="f622ab7b-f3a8-48a1-946c-6e152e569047" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVkAAAArCAYAAADSb/ulAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGbSURBVHhe7dwxSgNBGIbhHMoDeBQttPMAacTOJlh4Dot0wcbaxiaNdnYSULSxSGxGjYv8u65JlsyArM8DHyxkpn2LsOzg5XWRzMyszETWzKzgRNbMrOC+I/s8GJiZWaaJrJlZwYmsmVnBrYwsAN3FjoosQGaxoyILkFnsqMgCZBY7KrIAmcWOiixAZrGjIgv8A7N0eXyadvY33+5wnO7equsdxY6KLNB/D5N01BLSdRvdVPc7ih0VWaD/qshuHM2u5xtiR0UW6D+RBShIZAEKElmAP0RkAerm04u0d9D+lkD7ztLJ1ay63SCyAHXT87aQrtlwkh6r+zUiC1C3jOxv0Wyx8rzIAtSJLEBBIgtQ0DaRXT5//kfbmMgCVHJHdvfjt/uvo53Fjoos0AvbRDa32FGRBXpBZAEKElmAgkQWoCCRBShoGc3GGwJrJ7IAm5nfjtNhxw/EjK6fqtt5xY6KLEBmsaMiC5BZ7KjIAmQWOyqyAJnFjoosQGaxoyILkFns6MrImpnZdhNZM7OCE1kzs4L7EVkzM8u9RXoH/F4aeR/4NpcAAAAASUVORK5CYII=" InformativeScreenshot="ab38758c9be4c9738aac17ccbc7e0d5f.png" Reference="_STlSmqvnk2nWpXaiClazw/xpZdeid-WEmbnf1yRZSe1g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Manage Consolidated Billing*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into  Distribution Channel " EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,25" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Text="[In_DistributionChannel + &quot;[k(enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" ContentHash="HzDwCaP5K0KeAH9U5B8XKA" DesignTimeRectangle="424, 539, 341, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'Type into  Distribution Channel'" FullSelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-DistributionChannel' omit:ui5-label='Distribution Channel' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-DistributionChannel' ui5-label='Distribution Channel' tag='DIV' type='' class='sapMInput sapMInputBase sapMInputBaseHasEndIcons sapMInputBaseHeightMargin sapMMultiInput' aaname='' /&gt;" Guid="af3d6efa-abfc-4b89-8ba1-2e1e3649f11b" InformativeScreenshot="d41ba07301b983de71c9dd52770f1ad7.png" Reference="_STlSmqvnk2nWpXaiClazw/fABbBe4OvEOtAnFnfa0QoQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Type Into 'Division Box''" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,25" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Text="[In_Division + &quot;[k(enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" ContentHash="SGMLLW3_akqX5UaE0nFAug" DesignTimeRectangle="789, 539, 341, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'Type Into 'Division Box''" FullSelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-OrganizationDivision' omit:ui5-label='Division' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchReqSmartFilterBarContract-filterItemControl_BASIC-OrganizationDivision' ui5-label='Division' tag='DIV' type='' class='sapMInput sapMInputBase sapMInputBaseHasEndIcons sapMInputBaseHeightMargin sapMMultiInput' aaname='' /&gt;" Guid="7d278ea9-296a-4453-b298-555edc394693" InformativeScreenshot="cb2da9366463d2a743b75662424572f7.png" Reference="_STlSmqvnk2nWpXaiClazw/B8_Os7OXXUSVezrbaLhDQw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Manage Consolidated Billing*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope For ContractNumberExists on Screen" sap:VirtualizedContainerService.HintSize="854,25" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[Convert.ToInt32(in_Config(&quot;MaxRetryNumber&quot;).ToString)]" RetryInterval="[TimeSpan.FromSeconds(CInt(in_Config(&quot;RetryInterval&quot;).ToString.Trim))]">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean">
+                  <ui:UiElementExists DisplayName="ContractNumberExists " Exists="[ContractNumberExists]" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="98d48701-c318-4924-801a-20c46f9131dc" InformativeScreenshot="a5bf78fb6311c217e3df34e03f555ea3" Selector="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl ui5-type='Group Header Row' ui5p-title='*' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:UiElementExists>
+                </ActivityFunc>
+              </ui:RetryScope.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:RetryScope>
+            <If Condition="[ContractNumberExists]" DisplayName="If | ContractNumberExists" sap:VirtualizedContainerService.HintSize="854,1840" sap2010:WorkflowViewState.IdRef="If_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Take count of Contract Number and Click on Create" sap:VirtualizedContainerService.HintSize="496,1564" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGetAttribute Attribute="ui5p-text" DisplayName="Get Attribute 'Total Contract Number''" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="NGetAttribute_2" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Version="V3">
+                          <uix:NGetAttribute.Result>
+                            <OutArgument x:TypeArguments="x:String">[TotalContractNo]</OutArgument>
+                          </uix:NGetAttribute.Result>
+                          <uix:NGetAttribute.Target>
+                            <uix:TargetAnchorable BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" ContentHash="ZDVZsuNRNEuAwOVxX08KrQ" DesignTimeRectangle="35, 809, 375, 31" DesignTimeScaleFactor="1.5" FriendlyName="'Get Attribute 'Total Contract Number''" FullSelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl id='searchReqSmartTableContract-header' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchReqSmartTableContract-header' ui5p-text='Grouping by Contract: Items (4)' tag='DIV' type='' class='sapMBarChild sapMH4Style sapMTitle sapMTitleMaxWidth sapMTitleNoWrap sapMTitleStyleAuto sapMTitleTB sapUiCompSmartTableHeader sapUiSelectable' aaname='' check:text='Grouping by Contract: Items (4)' /&gt;" Guid="091e2cb1-62b5-47f4-8aa1-1b22fceda841" ImageBase64="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" InformativeScreenshot="50172e198b5ac5b1fb2b8eb96addf231.png" Reference="_STlSmqvnk2nWpXaiClazw/By04502S8EGP-Qw4lxEe0A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Manage Consolidated Billing*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NGetAttribute.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NGetAttribute>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <uix:NGetAttribute Attribute="ui5p-text" DisplayName="Get Attribute 'Get Attribute for Total Contract Number'" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="NGetAttribute_3" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Version="V3">
+                    <uix:NGetAttribute.Result>
+                      <OutArgument x:TypeArguments="x:String">[TotalContractNo]</OutArgument>
+                    </uix:NGetAttribute.Result>
+                    <uix:NGetAttribute.Target>
+                      <uix:TargetAnchorable BrowserURL="https://launchpad-qa.orica.net/fiori#ManageConsolBilling-display" ContentHash="BhIfzxhd10yrWwylqXTxgg" DesignTimeRectangle="24, 452, 260, 21" DesignTimeScaleFactor="1" FriendlyName="'Get Attribute for Total Contract Number'" FullSelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl id='searchReqSmartTableContract-header' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl id='searchReqSmartTableContract-header' tag='DIV' type='' class='sapMTitle sapMTitleStyleAuto sapMTitleNoWrap sapUiSelectable sapMTitleMaxWidth sapMTitleTB sapMH4Style sapUiCompSmartTableHeader sapMBarChild' aaname='' check:innerText='Grouping by Contract: Items (55)' /&gt;" Guid="4185b147-31a9-4c36-b41f-d1f4f7680f18" InformativeScreenshot="056de530460731c9b6c2222cabc944b1.png" Reference="_STlSmqvnk2nWpXaiClazw/mPAdRqoDL062ZLBLh3PaOQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NGetAttribute.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetAttribute>
+                  <ui:MultipleAssign DisplayName="Assign TotalContract Numbers" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[TotalContractNo]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[TotalContractNo.Replace("Grouping by Contract: Items (","")]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[TotalContractNo]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[TotalContractNo.Replace(")","")]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[Out_ContcatNumbers]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[TotalContractNo]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:MultipleAssign>
+                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ContinueOnError="True" DisplayName="Scroll Down" sap:VirtualizedContainerService.HintSize="434,933" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="75070bce6b4fa2a438c70f64812bd560" Selector="&lt;wnd app='msedge.exe' title='Manage Consolidated Billing*' /&gt;">
+                    <ui:WindowScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,786" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,218" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayBefore="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DelayMS="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DisplayName="Click on Screen" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="24a24872-f81b-4287-a837-1d283cbe93bf" InformativeScreenshot="0b00ffc3356d5238924956976d3ac600" Selector="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;&lt;webctrl id='application-ManageConsolBilling-display-component---main--mainPage-page' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:Click>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Click 'Checkbox''" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" ContentHash="u9S-xQ_K7ka1hKcN_k2rUQ" DesignTimeRectangle="9, 649, 32, 32" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Click 'Checkbox''" FullSelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl idx='2' ui5-role='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl tag='DIV' ui5-role='checkbox' type='' class='sapMCb sapMLIBSelectM' aaname='' /&gt;" Guid="c79a8865-dd65-48c3-94ed-8ef437062211" InformativeScreenshot="aa85bfe595188200ee39906ca4f95479.png" Reference="_STlSmqvnk2nWpXaiClazw/KU6Y5GazLEeCF3KTuZ9MFw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DelayBefore="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DelayMS="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DisplayName="Enter END" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="end" KeyModifiers="None" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3c0561b2-3bcc-49f2-b990-82e77a924d59">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:SendHotkey>
+                          <Delay Duration="[TimeSpan.FromSeconds(CInt(in_Config(&quot;Low&quot;).ToString.Trim))]" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Delay_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DelayBefore="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DelayMS="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DisplayName="Enter END" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="SendHotkey_10" Key="end" KeyModifiers="None" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3c0561b2-3bcc-49f2-b990-82e77a924d59">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:SendHotkey>
+                          <Delay Duration="[TimeSpan.FromSeconds(CInt(in_Config(&quot;Medium&quot;).ToString.Trim))]" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Delay_8">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DelayBefore="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DelayMS="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DisplayName="Enter END" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="end" KeyModifiers="None" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3c0561b2-3bcc-49f2-b990-82e77a924d59">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:SendHotkey>
+                          <Delay Duration="[TimeSpan.FromSeconds(CInt(in_Config(&quot;High&quot;).ToString.Trim))]" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Delay_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DelayBefore="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DelayMS="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DisplayName="Enter END" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="SendHotkey_16" Key="end" KeyModifiers="None" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3c0561b2-3bcc-49f2-b990-82e77a924d59">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:SendHotkey>
+                          <Delay Duration="[TimeSpan.FromSeconds(CInt(in_Config(&quot;Low&quot;).ToString.Trim))]" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Delay_10">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DelayBefore="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DelayMS="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DisplayName="Enter END" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="end" KeyModifiers="None" SpecialKey="True">
+                                  <ui:SendHotkey.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c0561b2-3bcc-49f2-b990-82e77a924d59" InformativeScreenshot="c5cbd7407dba10bb622363ba6712b581" Selector="&lt;html app='msedge.exe' title='Manage Consolidated Billing*' /&gt;&lt;webctrl id='application-ManageConsolBilling-display-component---main--mainPage-page' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:SendHotkey.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:SendHotkey>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:WindowScope.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:WindowScope>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Click 'ContractNo. CheckBox''" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" ContentHash="NdtqVNRiI0mePVlyIEKUvg" DesignTimeRectangle="13, 862, 48, 48" DesignTimeScaleFactor="1.5" ElementType="CheckBox" FriendlyName="'Click 'ContractNo. CheckBox''" FullSelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl ui5-role='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl ui5-role='checkbox' tag='DIV' type='' class='sapMCb sapMLIBSelectM' aaname='' /&gt;" Guid="1a8611b1-2cea-4f02-9786-2737fc77912a" InformativeScreenshot="6305bcf53d54b48a50f9c886e82ac4b2.png" Reference="_STlSmqvnk2nWpXaiClazw/uXiiPolVZEK1LeWFJXGryw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;a&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <Delay Duration="[TimeSpan.FromSeconds(CInt(in_Config(&quot;Low&quot;).ToString.Trim))]" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Delay_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Delay>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;b&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Click 'Create Button''" sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" ContentHash="eSoSlh_6DUKWJ58OdQu8QQ" DesignTimeRectangle="1806, 978, 119, 48" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Click 'Create Button''" FullSelectorArgument="&lt;webctrl id='application-ManageConsolBilling-display-component---main--createButton' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ManageConsolBilling-display-component---main--createButton' tag='BUTTON' type='' class='sapMBarChild sapMBtn sapMBtnBase sapMBtnDisabled' aaname='Create Billing Documents' check:text='Create' /&gt;" Guid="16ab3cfc-d71b-499e-9c93-60b575ad20ea" InformativeScreenshot="c2a3ba04c97fd05ef1ce4f9e17014c77.png" Reference="_STlSmqvnk2nWpXaiClazw/OK3m_a_140uHOhhxjz2Hbw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Manage Consolidated Billing*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,80" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw DisplayName="Throw   SE" Exception="[New SystemException(in_Config(&quot;SE_Massage5&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Throw_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Throw>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="854,25" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click on Create Button" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:ClickImage.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:ClickImage.CursorPosition>
+                    <ui:ClickImage.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                    </ui:ClickImage.Image>
+                    <ui:ClickImage.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c8a57e49-6201-45b6-925b-c3cc605f76f5">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:ClickImage.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ClickImage>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NCheckState DisplayName="Check App State 'Create Billing Documents Screen title'" sap:VirtualizedContainerService.HintSize="854,617" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Timeout="[Convert.ToDouble(in_Config(&quot;RetryInterval&quot;).ToString)]" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,400" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="462,191" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Cancel &amp; Again Scroll" sap:VirtualizedContainerService.HintSize="400,80" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Click 'Cancel''" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://launchpad.orica.net/fiori#ManageConsolBilling-display" ContentHash="a7qou4uHSUu_HkherKSMRA" DesignTimeRectangle="760, 484, 59, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Click 'Cancel''" FullSelectorArgument="&lt;webctrl id='dialogButtonCancel' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dialogButtonCancel' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBarChild' aaname='Cancel' check:innerText='Cancel' /&gt;" Guid="0b983926-afac-4bed-86f1-db6c6b7b0516" InformativeScreenshot="2dd7e018e500c71ed6ae8a925f034521.png" Reference="_STlSmqvnk2nWpXaiClazw/MLaZ_oQL_UuIrnGPlEEBrg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ContinueOnError="True" DisplayName="Scroll Down" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="75070bce6b4fa2a438c70f64812bd560" Selector="&lt;wnd app='msedge.exe' title='Manage Consolidated Billing*' /&gt;">
+                            <ui:WindowScope.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,266" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Delay_4">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Delay>
+                                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DelayBefore="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DelayMS="[CInt(in_Config(&quot;DelayLow&quot;).ToString.Trim)]" DisplayName="Enter END" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="end" KeyModifiers="None" SpecialKey="True">
+                                    <ui:SendHotkey.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3c0561b2-3bcc-49f2-b990-82e77a924d59">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:SendHotkey.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:SendHotkey>
+                                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Delay_5">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Delay>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:WindowScope.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:WindowScope>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Click 'ContractNo. CheckBox''" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" ContentHash="NdtqVNRiI0mePVlyIEKUvg" DesignTimeRectangle="13, 862, 48, 48" DesignTimeScaleFactor="1.5" ElementType="CheckBox" FriendlyName="'Click 'ContractNo. CheckBox''" FullSelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl ui5-role='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl ui5-role='checkbox' tag='DIV' type='' class='sapMCb sapMLIBSelectM' aaname='' /&gt;" Guid="1a8611b1-2cea-4f02-9786-2737fc77912a" InformativeScreenshot="6305bcf53d54b48a50f9c886e82ac4b2.png" Reference="_STlSmqvnk2nWpXaiClazw/uXiiPolVZEK1LeWFJXGryw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click on Create Button" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:ClickImage.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:ClickImage.CursorPosition>
+                            <ui:ClickImage.Image>
+                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                            </ui:ClickImage.Image>
+                            <ui:ClickImage.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c8a57e49-6201-45b6-925b-c3cc605f76f5">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:ClickImage.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:ClickImage>
+                        </Sequence>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Enter Billing Date: &quot;+in_BillingDate.Trim]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="1" DisplayName="Type Into 'Enter Billing Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Text="[in_BillingDate.Trim]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" ContentHash="Hz7UYQkDQ06xpcNEJJ5oFg" DesignTimeRectangle="524, 434, 160, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Enter Billing Date'" FullSelectorArgument="&lt;webctrl id='InvoiceDatePicker' /&gt;" FuzzySelectorArgument="&lt;webctrl id='InvoiceDatePicker' tag='DIV' type='' class='sapMInputBase sapMInputBaseHeightMargin sapMInputBaseHasEndIcons' aaname='' /&gt;" Guid="d248e52f-20d0-49c9-8f3c-a4ff52d2bb60" InformativeScreenshot="10e472655d34408837b6141f64ce9078.png" Reference="_STlSmqvnk2nWpXaiClazw/q2H-tWN1J0iAD1y0TLpsQw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Click 'Create Btn Pop Up''" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8bd455bc-c333-40c2-ba92-e523520419b0" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" ContentHash="14PL7XTIO0ui7Mj7jhApZA" DesignTimeRectangle="1026, 688, 84, 48" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Click 'Create Btn Pop Up''" FullSelectorArgument="&lt;webctrl id='dialogDatePickerButtonCreate' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dialogDatePickerButtonCreate' tag='BUTTON' type='' class='sapMBarChild sapMBtn sapMBtnBase' aaname='Create' check:text='Create' /&gt;" Guid="ac44128a-cf86-485e-a7d6-db3a2cfbafe4" InformativeScreenshot="588282569c3845634721457f410d9e5c.png" Reference="_STlSmqvnk2nWpXaiClazw/vgEAXO6tGEqCFYJ06d-1zQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Manage Consolidated Billing*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,140" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw DisplayName="Throw BE" Exception="[new BusinessRuleException(in_Config(&quot;BE_Massage1&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="Throw_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Throw>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" ContentHash="29f9HZHRy0CHoQL0T6lgIw" DesignTimeRectangle="837, 416, 268, 48" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Create Billing Documents Screen title'" FullSelectorArgument="&lt;webctrl id='BillingParameters-title' /&gt;" FuzzySelectorArgument="&lt;webctrl id='BillingParameters-title' tag='H2' type='' class='sapMBarChild sapMDialogTitle sapMTitle sapMTitleMaxWidth sapMTitleNoWrap sapMTitleStyleAuto sapUiSelectable' aaname='' check:text='Create Billing Documents' /&gt;" Guid="6abb7ae0-b313-47a0-932a-d2477f432c9b" InformativeScreenshot="e5e3a9ea3e86c8c4b9062e76194ae06e.png" Reference="IuIVQQ0be0adgHtC-zg-VA/X5oUivbXK0ORtqKIQHxMIQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Manage Consolidated Billing*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="DeqefSlC7UaN1Y5PDE7wMg" IconBase64="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" InformativeScreenshot="60f77e4f1f278fa170f6e16228978587.jpg" Reference="_STlSmqvnk2nWpXaiClazw/mPaXs6so5kKcj5DYpX6fRA" Selector="&lt;html app='msedge.exe' title='*Manage Consolidated Billing*' /&gt;" Url="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="950,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Input Details for Manage Consolidated Billings workflow done.&quot;]" />
+  </Sequence>
+</Activity>

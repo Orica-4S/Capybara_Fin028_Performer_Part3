@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SFlMmw-I6kOpBN4P5iIrdw" Reference="IuIVQQ0be0adgHtC-zg-VA/iszTPDzA_Eq0XKpZXCTL6A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://launchpad-sp.orica.net/fiori#ManageConsolBilling-display&amp;/Messages" DesignTimeRectangle="11, 186, 1920, 845" DesignTimeScaleFactor="1.5" FriendlyName="'Screenshot 'Consolidated Billing''" FullSelectorArgument="&lt;webctrl idx='2' ui5-class='sap.m.Page' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' ui5-class='sap.m.Page' type='' class='sapMPage sapMPageBgStandard sapMPageBusyCoversAll sapMPageWithFooter sapMPageWithHeader' aaname='' check:innerText='Consolidated Billing Results (4)&amp;#xD;&amp;#xA;&amp;#x9;Contract No&amp;#x9;Sales document&amp;#x9;Sales Document Item&amp;#x9;Item category' /&gt;" Guid="23189e65-df4d-4374-861f-db7e1e91ef38" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Manage Consolidated Billing' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="462f3f995e7e6fd87d338f1503a35433.png" xmlns="">462f3f995e7e6fd87d338f1503a35433.png</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TakeScreenshot</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

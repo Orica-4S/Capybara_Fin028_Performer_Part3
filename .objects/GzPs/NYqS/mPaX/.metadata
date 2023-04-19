@@ -1,0 +1,14 @@
+﻿{
+  "Id": "mPaXs6so5kKcj5DYpX6fRA",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/mPaXs6so5kKcj5DYpX6fRA",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/NYqSJ80FvE-vw46rB4bqYg",
+  "Name": "Manage Consolidated Billing Screen(1)",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2023-02-20T09:02:38.3485296Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-02-20T09:02:38.3485296Z"
+}

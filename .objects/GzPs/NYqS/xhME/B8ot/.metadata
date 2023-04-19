@@ -1,0 +1,14 @@
+﻿{
+  "Id": "B8otdQaGrEecFtX_dxcKEA",
+  "Reference": "_STlSmqvnk2nWpXaiClazw/B8otdQaGrEecFtX_dxcKEA",
+  "ParentRef": "_STlSmqvnk2nWpXaiClazw/xhMEZA4zEkeCLh76SZRUog",
+  "Name": "Mouse Scroll Down",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-03-23T08:07:35.5663333Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-03-23T08:07:35.5663333Z"
+}
